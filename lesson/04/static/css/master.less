@@ -1,0 +1,143 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.btn {
+  padding: 5px 10px;
+
+  line-height: 20px;
+  cursor: pointer;
+
+  &.toggle {
+    background: #eee;
+  }
+
+  &.submit {
+    margin-left: 5px;
+    color: #ffffff;
+    background: #FF4400;
+  }
+}
+
+body {
+  font-family: "微软雅黑", 'Microsoft YaHei', sans-serif;
+  font-size: 12px;
+}
+
+.container {
+  margin: 0 auto;
+  border-top: 3px solid #FF4400;
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 700px;
+  }
+  @media (min-width: 960px) {
+    width: 960px;
+  }
+}
+
+.crumb {
+  position: relative;
+  display: flex;
+  padding: 5px 0 5px 20px;
+  box-sizing: border-box;
+
+  width: 100%;
+  line-height: 30px;
+
+  .head {
+    width: 50px;
+  }
+
+  .keys {
+    flex: 1;
+    span {
+      display: inline-block;
+      margin:0 5px;
+      padding: 3px 7px;
+
+      height: 20px;
+      line-height: 20px;
+
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: all .2s ease 0s;
+
+      &:hover {
+        border-color: red;
+      }
+    }
+  }
+
+  .foot {
+    text-align: right;
+    width: 140px;
+  }
+}
+
+.group {
+  padding: 0 5px;
+  border: 1px dashed #ccc;
+
+  .row {
+    display: flex;
+    padding: 0 15px;
+    line-height: 40px;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      border-bottom: 1px dashed #ccc;
+    }
+
+    > div {
+      display: inline-block;
+    }
+  }
+
+  .head {
+    width: 50px;
+    color: #666;
+  }
+
+  .body {
+    flex: 1;
+
+    > span {
+      display: inline-block;
+
+      padding: 0 15px;
+
+      cursor: pointer;
+
+      &:hover {
+        color: #FF4400;
+      }
+      &.active {
+        color: blue !important;
+      }
+    }
+  }
+
+  .foot {
+    width: 100px;
+    text-align: right;
+
+    span {
+      display: inline-block;
+      margin-left: 10px;
+      padding: 0 5px;
+      cursor: pointer;
+
+      &:first-child {
+        height: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.price {
+  padding-top: 12px;
+  padding-left: 22px;
+  margin-right: 10px;
+}

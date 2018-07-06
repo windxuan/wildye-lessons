@@ -1,0 +1,119 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.btn {
+  padding: 5px 10px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.btn.toggle {
+  background: #eee;
+}
+.btn.submit {
+  margin-left: 5px;
+  color: #ffffff;
+  background: #FF4400;
+}
+body {
+  font-family: "微软雅黑", 'Microsoft YaHei', sans-serif;
+  font-size: 12px;
+}
+.container {
+  margin: 0 auto;
+  border-top: 3px solid #FF4400;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+}
+@media (min-width: 960px) {
+  .container {
+    width: 960px;
+  }
+}
+.crumb {
+  position: relative;
+  display: flex;
+  padding: 5px 0 5px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 30px;
+}
+.crumb .head {
+  width: 50px;
+}
+.crumb .keys {
+  flex: 1;
+}
+.crumb .keys span {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 3px 7px;
+  height: 20px;
+  line-height: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all .2s ease 0s;
+}
+.crumb .keys span:hover {
+  border-color: red;
+}
+.crumb .foot {
+  text-align: right;
+  width: 140px;
+}
+.group {
+  padding: 0 5px;
+  border: 1px dashed #ccc;
+}
+.group .row {
+  display: flex;
+  padding: 0 15px;
+  line-height: 40px;
+  overflow: hidden;
+}
+.group .row:not(:last-child) {
+  border-bottom: 1px dashed #ccc;
+}
+.group .row > div {
+  display: inline-block;
+}
+.group .head {
+  width: 50px;
+  color: #666;
+}
+.group .body {
+  flex: 1;
+}
+.group .body > span {
+  display: inline-block;
+  padding: 0 15px;
+  cursor: pointer;
+}
+.group .body > span:hover {
+  color: #FF4400;
+}
+.group .body > span.active {
+  color: blue !important;
+}
+.group .foot {
+  width: 100px;
+  text-align: right;
+}
+.group .foot span {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+.group .foot span:first-child {
+  height: 20px;
+  line-height: 20px;
+}
+.price {
+  padding-top: 12px;
+  padding-left: 25px;
+}

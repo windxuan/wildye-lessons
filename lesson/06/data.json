@@ -1,0 +1,64 @@
+{
+    "menu":[
+        {
+            "title": "HOME",
+            "link": "#"
+        },
+        {
+            "title": "ABOUT",
+            "link": "#"
+        },
+        {
+            "title": "SERVICES",
+            "link": "#"
+        },
+        {
+            "title": "PORTFOLIO",
+            "link": "#",
+            "subset": [
+                {
+                    "title": "Portfolio 1 column page",
+                    "link": "#"
+                },
+                {
+                    "title": "Portfolio 2 column page",
+                    "link": "#"
+                },
+                {
+                    "title": "Portfolio 3 column page",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "title": "BLOG",
+            "link": "#"
+        },
+        {
+            "title": "FEATURES",
+            "link": "#"
+        },
+        {
+            "title": "CONTACTS",
+            "link": "#",
+            "subset": [
+                {
+                    "title": "CONTACTS 1",
+                    "link": "#"
+                },
+                {
+                    "title": "CONTACTS 2",
+                    "link": "#"
+                },
+                {
+                    "title": "CONTACTS 3",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "title": "<i class='fa fa-search'></i>",
+            "link": "#"
+        }
+    ]
+}

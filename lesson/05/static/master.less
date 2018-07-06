@@ -1,0 +1,123 @@
+@base-color: #111;
+@base-bg: #454B54;
+@nav-bg: #f8f8f8;
+@arrows-color: #04acec;
+
+/* base */
+body {
+    font-family: "微软雅黑";
+    font-size: 12px;
+    background: @base-bg;
+    overflow: hidden;
+
+    ul, li {
+        list-style: none;
+    }
+    a {
+        color: @base-color;
+        text-decoration: none;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* menu layout */
+ul.nav-top {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    > li {
+        float: left;
+    }
+    li {
+        position: relative;
+        white-space:nowrap;
+        &:hover {
+            margin-top: 0; // animation
+            margin-left: 0; // animation
+        }
+        ul {
+            position: absolute;
+            top: 42px;
+            left: 0;
+            z-index: 1;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .2s ease-in-out; // animation
+        }
+    }
+    li:hover {
+        > ul {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    ul {
+        ul {
+            top: 3px;
+            left: 80px;
+            margin-top: 20px; // animation
+            margin-left: 20px; // animation
+            box-shadow: 2px 2px 5px #666; // animation
+        }
+    }
+}
+
+// style
+ul.nav-top {
+    margin: 50px 0 0 50px;
+    > li {
+        margin-right: 3px;
+        line-height: 40px;
+        background: @nav-bg;
+        li {
+            &:not(:last-child) {
+                border-bottom: 1px dashed darken(@nav-bg, 10%);
+            }
+        }
+        > a:hover {
+            color: inherit !important;
+        }
+        a {
+            padding: 0 30px;
+            &:hover {
+                color: @nav-bg; 
+            }
+        }
+    }
+    li {
+        &.more::before {
+            content: '+';
+            position: absolute;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #999;
+            top: 0;
+            left: 10px;
+        }
+        &.more:hover::before {
+            content: '-';
+            left: 12.5px;
+            color: blue;
+        }
+        &:hover > ul {
+            margin-top: 0;
+            margin-left: 0;
+        }
+        a {
+            display: block;
+            min-width: 60px;
+            &:hover {
+                background: lighten(@arrows-color, 10%);
+            }
+        }
+        ul {
+            background: @nav-bg;
+            transition: all .2s ease-in-out;
+        }
+    }
+}
